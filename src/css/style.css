@@ -1,0 +1,139 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+
+/* Estiliza as seções da página */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+input {
+  width: 30rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Estiliza os botões dentro das seções */
+button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+  width: 60rem;
+  height: 46vh;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+  text-decoration: underline;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 1rem;
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+  width: 60rem;
+  height: auto; /* Ajusta a altura automaticamente */
+  max-height: 60vh; /* Limita a altura máxima */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza a imagem da capa do livro */
+.capa-livro {
+  width: 128px; /* Largura da imagem */
+  height: 200px; /* Altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+  border-radius: 0.6rem; /* Borda arredondada */
+  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+/* Estiliza as estrelas */
+.star {
+  font-size: 1.2rem; /* Tamanho das estrelas */
+  color: #ffd700; /* Cor das estrelas */
+  margin-right: 0.2rem; /* Espaçamento entre as estrelas */
+}
+
+/* Estilo para estrelas preenchidas */
+.star.filled {
+  color: #ffd700; /* Cor das estrelas preenchidas */
+}
