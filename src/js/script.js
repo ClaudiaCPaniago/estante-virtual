@@ -19,27 +19,31 @@ document.addEventListener("DOMContentLoaded", () => {
                     : "https://via.placeholder.com/128x200.png?text=No+Cover";
                   const rating = volumeInfo.averageRating || "N/A"; // Obtém a classificação média ou 'N/A' se não estiver disponível
                   return `
-                              <div class="item-resultado">
-                                  <img src="${imageLink}" alt="${
+                    <div class="item-resultado">
+                      <div class="imagem-container">
+                        <img src="${imageLink}" alt="${
                     volumeInfo.title
                   }" class="capa-livro">
-                                  <h2>${volumeInfo.title}</h2>
-                                  <p class="descricao-meta">${
-                                    volumeInfo.authors
-                                      ? volumeInfo.authors.join(", ")
-                                      : "Autor desconhecido"
-                                  }</p>
-                                  <p class="descricao-meta">${
-                                    volumeInfo.description || "Sem descrição"
-                                  }</p>
-                                  <p class="descricao-meta">Classificação: ${rating} ${renderStars(
+                      </div>
+                      <div class="info-container">
+                        <h2>${volumeInfo.title}</h2>
+                        <p class="descricao-meta">${
+                          volumeInfo.authors
+                            ? volumeInfo.authors.join(", ")
+                            : "Autor desconhecido"
+                        }</p>
+                        <p class="descricao-meta">${
+                          volumeInfo.description || "Sem descrição"
+                        }</p>
+                        <p class="descricao-meta">Classificação: ${rating} ${renderStars(
                     rating
                   )}</p>
-                                  <a href="${
-                                    volumeInfo.infoLink
-                                  }" target="_blank">Saiba mais</a>
-                              </div>
-                          `;
+                        <a href="${
+                          volumeInfo.infoLink
+                        }" target="_blank">Saiba mais</a>
+                      </div>
+                    </div>
+                  `;
                 })
                 .join("")
             : "<p>Nenhum resultado encontrado.</p>";

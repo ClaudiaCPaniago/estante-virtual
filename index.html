@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/css/style.css">
-  <!-- <link rel="shortcut icon" href="/src/img/icone/Captura-de-tela-2024-09-02-145336.ico" type="image/x-icon"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>Recomendações de Livros</title>
@@ -13,32 +12,45 @@
 
 <body>
   <header>
-    <h1>Book library web archive</h1>
+    <a href="/index.html">
+      <i class="fa-solid fa-book"></i>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
   </header>
+
   <section class="books">
-    <h2>Leia mais livros!</h2>
-    <!-- <img src="src/img/pagina-de-destino-do-modelo-de-banner-do-dia-mundial-do-livro_773626-1170.svg" height="100px" alt="livro"> -->
+    <div class="div-imagem">
+      <img src="/src/img/book 1.png" alt="livro">
+    </div>
+    <div class="div-titulos">
+      <h1>Book library web archive</h1>
+      <h2>Leia mais livros!</h2>
+    </div>
   </section>
 
   <main>
     <section>
-      <input type=" text" placeholder="Digite o nome do livro">
+      <input type="text" placeholder="Digite o nome do livro">
       <button aria-label="Pesquisar">Pesquisar</button>
     </section>
 
-
-
     <section class="resultados-pesquisa">
-      <section class="resultados-pesquisa" id="resultados">
-
+      <section id="resultados">
+        <!-- Resultados serão inseridos aqui dinamicamente -->
       </section>
     </section>
   </main>
+
   <footer>
     <p>2024 - Recomendações de livros. Todos os direitos reservados</p>
-
   </footer>
+
   <script src="/src/js/script.js"></script>
 </body>
+
+
 
 </html>

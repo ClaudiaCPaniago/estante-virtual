@@ -1,24 +1,63 @@
-body {
-  font-family: "Chakra Petch", sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* Estiliza os títulos h1 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #e3dcf2;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background-color: #c1bad9;
+  padding: 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  color: #333;
+  font-weight: 100;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+i {
+  color: #333;
+  font-size: 30px;
+}
+
 h1 {
   font-size: 2.5rem;
   color: #333;
   text-align: center;
   letter-spacing: 0.4rem;
+  padding: 50px 10px;
 }
 
-/* Estiliza as seções da página */
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.div-titulos {
+  align-items: center;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -28,112 +67,90 @@ section {
 
 input {
   width: 30rem;
-  border: none;
-  padding: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem 1rem 1rem 2.5rem;
   border-radius: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
   font-size: 1rem;
-  box-sizing: border-box;
 }
 
-/* Estiliza os botões dentro das seções */
 button {
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 1.5rem;
-  background-color: #007bff;
+  background-color: #95bfa4;
   color: #fff;
-  margin: 0 auto;
   font-size: 1rem;
   cursor: pointer;
 }
 
-/* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
   width: 60rem;
-  height: 46vh;
+  max-height: 60vh;
   overflow-y: auto;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin: 0 auto;
   padding: 1rem;
+  align-items: center;
   border-radius: 0.6rem;
 }
 
-/* Estiliza cada item de resultado */
 .item-resultado {
-  background: #fff;
+  /* background: #fff; */
+  background-color: #f2f2f2;
   border-radius: 0.6rem;
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-  font-size: 1.5rem;
-  color: #333;
+.imagem-container {
+  margin-right: 20px;
 }
 
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
+.capa-livro {
+  max-width: 128px;
+  max-height: 200px;
+}
+
+.info-container {
+  flex: 1;
+}
+
+.info-container h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.info-container .descricao-meta {
+  margin: 5px 0;
+}
+
+.info-container a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #95bfa4;
   text-decoration: none;
-  color: #007bff;
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
+.info-container a:hover {
   text-decoration: underline;
 }
 
-/* Estiliza o rodapé da página */
+.star {
+  font-size: 1.5rem;
+  color: rgba(231, 231, 39, 0.884);
+}
+
 footer {
-  background-color: #f8f9fa;
+  background-color: #c1bad9;
   color: #333;
   text-align: center;
-  padding: 1rem;
+  padding: 25px 0;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  height: auto;
   font-size: 1rem;
-}
-
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-  width: 60rem;
-  height: auto; /* Ajusta a altura automaticamente */
-  max-height: 60vh; /* Limita a altura máxima */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 0.6rem;
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-  background: #fff;
-  border-radius: 0.6rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estiliza a imagem da capa do livro */
-.capa-livro {
-  width: 128px; /* Largura da imagem */
-  height: 200px; /* Altura da imagem */
-  object-fit: cover; /* Ajusta a imagem para preencher o espaço */
-  border-radius: 0.6rem; /* Borda arredondada */
-  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
-}
-
-/* Estiliza as estrelas */
-.star {
-  font-size: 1.2rem; /* Tamanho das estrelas */
-  color: #ffd700; /* Cor das estrelas */
-  margin-right: 0.2rem; /* Espaçamento entre as estrelas */
-}
-
-/* Estilo para estrelas preenchidas */
-.star.filled {
-  color: #ffd700; /* Cor das estrelas preenchidas */
 }
