@@ -17,25 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
                   const imageLink = volumeInfo.imageLinks
                     ? volumeInfo.imageLinks.thumbnail
                     : "https://via.placeholder.com/128x200.png?text=No+Cover";
-                  const rating = volumeInfo.averageRating || "N/A"; // Obtém a classificação média ou 'N/A' se não estiver disponível
+                  const rating = volumeInfo.averageRating || "N/A";
                   return `
                     <div class="item-resultado">
-                      <div class="imagem-container">
-                        <img src="${imageLink}" alt="${
+                      <img src="${imageLink}" alt="${
                     volumeInfo.title
                   }" class="capa-livro">
-                      </div>
                       <div class="info-container">
                         <h2>${volumeInfo.title}</h2>
-                        <p class="descricao-meta">${
+                        <p class="descricao-meta autor">${
                           volumeInfo.authors
                             ? volumeInfo.authors.join(", ")
                             : "Autor desconhecido"
                         }</p>
-                        <p class="descricao-meta">${
+                        <p class="descricao-meta descricao">${
                           volumeInfo.description || "Sem descrição"
                         }</p>
-                        <p class="descricao-meta">Classificação: ${rating} ${renderStars(
+                        <p class="descricao-meta classificacao">Classificação: ${rating} ${renderStars(
                     rating
                   )}</p>
                         <a href="${
@@ -56,12 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function renderStars(rating) {
-    const numStars = Math.round(rating); // Arredonda a classificação para o número inteiro mais próximo
+    const numStars = Math.round(rating);
     let stars = "";
     for (let i = 0; i < 5; i++) {
       stars +=
         i < numStars
-          ? '<span class="star filled">★</span>'
+          ? '<span class="star filled" style="color: gold;">★</span>'
           : '<span class="star">☆</span>';
     }
     return stars;

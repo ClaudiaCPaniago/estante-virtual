@@ -49,7 +49,7 @@ h1 {
   padding: 50px 10px;
 }
 
-h2 {
+.subtitulo {
   text-align: center;
   color: #333;
 }
@@ -140,9 +140,39 @@ button {
   text-decoration: underline;
 }
 
+h2 {
+  padding-left: 12px;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.autor {
+  padding-left: 12px;
+  padding-bottom: 10px;
+  color: #555;
+  font-weight: bold;
+}
+
+.descricao {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding-left: 12px;
+}
+
+.classificacao {
+  padding-left: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .star {
   font-size: 1.5rem;
   color: rgba(231, 231, 39, 0.884);
+}
+
+a {
+  padding-left: 12px;
 }
 
 footer {
