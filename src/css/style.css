@@ -22,13 +22,15 @@ main {
 
 img {
   width: 400px;
+  height: 350px;
 }
 
 h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #95bfa4;
+  font-weight: bold;
   text-align: center;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.3rem;
   padding: 15px 10px;
 }
 
@@ -45,7 +47,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 input {
@@ -53,7 +55,7 @@ input {
   border: 1px solid #ccc;
   padding: 1rem 1rem 1rem 2.5rem;
   border-radius: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
   color: #333;
   font-size: 1rem;
 }
@@ -171,7 +173,7 @@ footer {
   bottom: 20px;
   right: 20px;
   background-color: #95bfa4;
-  color: white;
+  color: #f2f2f2;
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -186,9 +188,40 @@ footer {
 }
 
 #scroll-to-top:hover {
-  background-color: #7da089;
+  background-color: #95bfa4;
 }
 
 #scroll-to-top.show {
   opacity: 1; /* Visível quando a classe "show" é adicionada */
+}
+
+/* Estilo da barra de rolagem para navegadores (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2; /* Cor de fundo da trilha da barra de rolagem */
+  border-radius: 10px; /* Arredondamento dos cantos da trilha */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #95bfa477; /* Cor da parte rolável (thumb) */
+  border-radius: 10px; /* Arredondamento dos cantos do thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #95bfa477; /* Cor do thumb quando o mouse está sobre ele */
+}
+
+/* Estilo da barra de rolagem para navegadores Firefox */
+.scrollbar {
+  scrollbar-width: thin; /* Largura da barra de rolagem */
+  scrollbar-color: #95bfa477 #f2f2f2; /* Cor do thumb e da trilha */
+}
+
+/* Exemplo de estilo para uma área com barra de rolagem personalizada */
+.custom-scrollbar {
+  height: 300px; /* Altura do contêiner com barra de rolagem */
+  overflow-y: scroll; /* Ativa a rolagem vertical */
 }
