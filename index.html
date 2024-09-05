@@ -11,44 +11,38 @@
 </head>
 
 <body>
-  <header>
-    <a href="/index.html">
-      <i class="fa-solid fa-book"></i>
-    </a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
-  </header>
-
-  <section class="books">
-    <div class="div-imagem">
-      <img src="/src/img/book 1.png" alt="livro">
-    </div>
-    <div class="div-titulos">
-      <h1>Book library web archive</h1>
-      <h2 class="subtitulo">Leia mais livros!</h2>
-    </div>
-  </section>
-
   <main>
+    <section class="books">
+      <div class="div-imagem">
+        <img src="/src/img/book 1.png" alt="livro">
+      </div>
+      <div class="div-titulos">
+        <h1>Estante Virtual</h1>
+        <h2 class="subtitulo">Descubra novas leituras!</h2>
+
+      </div>
+    </section>
+
+    <!-- <main> -->
     <section>
-      <input type="text" placeholder="Digite o nome do livro">
+
+      <input id="pesquisa-livro" type="text" placeholder="Digite o nome do livro">
       <button aria-label="Pesquisar">Pesquisar</button>
     </section>
 
-    <section class="resultados-pesquisa">
+    <section class="resultados-pesquisa" aria-live="polite">
       <section id="resultados">
         <!-- Resultados serão inseridos aqui dinamicamente -->
       </section>
     </section>
   </main>
-
+  <button id="scroll-to-top" aria-label="Voltar ao topo">↑</button>
   <footer>
-    <p>2024 - Recomendações de livros. Todos os direitos reservados</p>
+    <p>2024 - Estante Virtual. Todos os direitos reservados</p>
   </footer>
 
   <script src="/src/js/script.js"></script>
+
 </body>
 
 

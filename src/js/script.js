@@ -65,3 +65,25 @@ document.addEventListener("DOMContentLoaded", () => {
     return stars;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+
+  // Mostrar o botão quando o usuário rolar para baixo
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      // Alterar o valor conforme necessário
+      scrollToTopButton.classList.add("show");
+    } else {
+      scrollToTopButton.classList.remove("show");
+    }
+  });
+
+  // Adicionar o comportamento de rolar para o topo ao clicar no botão
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Rolagem suave
+    });
+  });
+});
