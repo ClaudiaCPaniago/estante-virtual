@@ -225,3 +225,69 @@ footer {
   height: 300px; /* Altura do contêiner com barra de rolagem */
   overflow-y: scroll; /* Ativa a rolagem vertical */
 }
+
+@media (max-width: 600px) {
+  body {
+    width: auto;
+  }
+  /* Estilizando a barra de pesquisa */
+  input {
+    width: 90%; /* A largura do input será 90% da tela no celular */
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  /* Ajustando a seção de resultados */
+  .resultados-pesquisa {
+    width: 95%; /* Deixar mais estreito para telas menores */
+    padding: 1rem;
+  }
+
+  .item-resultado {
+    flex-direction: column; /* Empilha a imagem e o conteúdo */
+    align-items: center;
+  }
+
+  .imagem-container {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .capa-livro {
+    max-width: 100px;
+    max-height: 150px;
+  }
+
+  .info-container {
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .info-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .info-container p {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding: 20px 0;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 15px 0;
+    font-size: 0.9rem;
+  }
+}

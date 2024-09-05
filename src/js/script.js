@@ -53,18 +53,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function renderStars(rating) {
-    const numStars = Math.round(rating);
-    let stars = "";
-    for (let i = 0; i < 5; i++) {
-      stars +=
-        i < numStars
-          ? '<span class="star filled" style="color: gold;">★</span>'
-          : '<span class="star">☆</span>';
-    }
-    return stars;
-  }
+  // function renderStars(rating) {
+  //   const numStars = Math.round(rating);
+  //   let stars = "";
+  //   for (let i = 0; i < 5; i++) {
+  //     stars +=
+  //       i < numStars
+  //         ? '<span class="star filled" style="color: gold;">★</span>'
+  //         : '<span class="star">☆</span>';
+  //   }
+  //   return stars;
+  // }
 });
+
+function renderStars(rating) {
+  if (rating === "N/A") return "";
+  const numStars = Math.round(rating);
+  let stars = "";
+  for (let i = 0; i < 5; i++) {
+    stars +=
+      i < numStars
+        ? '<span class="star filled" style="color: gold;">★</span>'
+        : '<span class="star">☆</span>';
+  }
+  return stars;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const scrollToTopButton = document.getElementById("scroll-to-top");
